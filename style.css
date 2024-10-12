@@ -1,13 +1,50 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #548687;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.light {
+    background-color: #f5f5f5;
+    color: #333;
     text-align: center;
 }
 
+body.dark {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    transition: color 0.5s ease;
+}
+
+/* Mode Button */
+.mode-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.mode-btn i {
+    color: #ffcc00;
+}
+
+body.dark .mode-btn i {
+    color: #00c1d4;
+}
+
+/* Box styling */
 .container {
     height: 70vh;
     display: flex;
@@ -32,32 +69,50 @@ body {
     border: none;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     font-size: 8vmin;
-    color: #b0413e;
-    background-color: #ffffc7;
+    background-color: #fff;
+    color: #333;
 }
 
+body.dark .box {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* Reset Button */
 #reset-btn {
     padding: 1rem;
     font-size: 1.25rem;
-    background-color: #191913;
+    background-color: #007BFF;
     color: #fff;
     border-radius: 1rem;
     border: none;
     cursor: pointer;
 }
 
+body.dark #reset-btn {
+    background-color: #ff4081;
+    color: #fff;
+}
+
+/* New game Button */
 #new-btn {
     padding: 1rem;
     font-size: 1.25rem;
-    background-color: #191913;
+    background-color: #007BFF;
     color: #fff;
     border-radius: 1rem;
     border: none;
     cursor: pointer;
 }
 
+body.dark #new-btn {
+    background-color: #ff4081;
+    color: #fff;
+}
+
 #msg {
-    color: #ffffc7;
+    color: #28A745;
     font-size: 8vmin;
 }
 

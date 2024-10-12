@@ -1,8 +1,28 @@
+let modeBtn = document.querySelector("#mode");
+let body = document.querySelector("body");
+let currMode = "light";
+
 let boxes = document.querySelectorAll(".box");
 let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+
+// Toggle between light and dark modes
+modeBtn.addEventListener("click", () => {
+    if(currMode === "light") {
+        currMode = "dark";
+        body.classList.add("dark");
+        body.classList.remove("light");
+        modeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    } else {
+        currMode = "light";
+        body.classList.add("light");
+        body.classList.remove("dark");
+        modeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    }
+    console.log(currMode);
+});
 
 let turnO = true; //playerX or playerO
 
