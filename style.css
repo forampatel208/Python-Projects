@@ -37,11 +37,11 @@ h1 {
 }
 
 .mode-btn i {
-    color: #ffcc00;
+    color: #333;
 }
 
 body.dark .mode-btn i {
-    color: #4450aa;
+    color: #dbefff;
 }
 
 /* Box styling */
@@ -92,12 +92,12 @@ body.dark .box {
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
-    transition: color 0.5s ease; /* Smooth transition of text color */
+    transition: color 0.5s ease; 
 }
 
 /* Dark mode for turn message */
 body.dark #turn-msg {
-    color: #ffcc00; /* Adjust the color to whatever fits best in dark mode */
+    color: #fff; 
 }
 
 /* Reset Button */

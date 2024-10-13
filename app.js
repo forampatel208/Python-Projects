@@ -5,6 +5,7 @@ let currMode = "light";
 let boxes = document.querySelectorAll(".box");
 let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
+let turnMsg = document.querySelector("#turn-msg");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
@@ -48,8 +49,15 @@ const resetGame = () => {
 
 // Function to update the turn message
 const updateTurnMessage = () => {
-    const turnMessage = turnO ? "Player O's turn" : "Player X's turn";
-    document.getElementById("turn-msg").innerText = turnMessage;
+    const playerOColor = "#ff5733";  // Color for 'O'
+    const playerXColor = "#33c1ff";  // Color for 'X'
+
+    // Use conditional logic to set the message with the correct player's color
+    if (turnO) {
+        turnMsg.innerHTML = `Player <span style="color: ${playerOColor};">O</span>'s turn`;
+    } else {
+        turnMsg.innerHTML = `Player <span style="color: ${playerXColor};">X</span>'s turn`;
+    }
 };
 
 // Initialize the game
