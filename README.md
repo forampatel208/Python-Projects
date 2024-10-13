@@ -23,8 +23,11 @@ To run the game locally, follow these steps:
    git clone https://github.com/forampatel208/tic-tac-toe.git
 2. cd Tic-Tac-Toe
 3. Open index.html in your web browser.
+
 ## How to Play
-Players take turns clicking on the empty boxes in the grid.
-The first player to get three of their marks in a row (up, down, across, or diagonally) wins the game.
-If all boxes are filled and no player has three marks in a row, the game is declared a draw.
-Use the "Reset" button to clear the board and start a new game.
+
+- Players take turns clicking on the empty boxes in the grid.
+- The first player to get three of their marks in a row (up, down, across, or diagonally) wins the game.
+- If all boxes are filled and no player has three marks in a row, the game is declared a draw.
+- Use the "Reset" button to clear the board and start a new game.
+
