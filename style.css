@@ -41,7 +41,7 @@ h1 {
 }
 
 body.dark .mode-btn i {
-    color: #78f4ff;
+    color: #4450aa;
 }
 
 /* Box styling */
@@ -71,6 +71,11 @@ body.dark .mode-btn i {
     font-size: 8vmin;
     background-color: #fff;
     color: #333;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.box:active {
+    transform: scale(0.95);
 }
 
 body.dark .box {
@@ -78,6 +83,22 @@ body.dark .box {
     color: #fff;
 }
 
+/* Turn Message */
+.turn-message {
+    margin-bottom: 20px;
+}
+
+#turn-msg {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.5s ease; /* Smooth transition of text color */
+}
+
+/* Dark mode for turn message */
+body.dark #turn-msg {
+    color: #ffcc00; /* Adjust the color to whatever fits best in dark mode */
+}
 
 /* Reset Button */
 #reset-btn {
@@ -123,6 +144,12 @@ body.dark #new-btn {
     align-items: center;
     flex-direction: column;
     gap: 4rem;
+}
+
+@media only screen and (max-width:635px) {
+    .msg-container {
+        height: 140vmin;
+    }    
 }
 
 .hide {
